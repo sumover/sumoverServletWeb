@@ -1,0 +1,58 @@
+<!--index.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PotatoSystem</title>
+</head>
+<body>
+<script language="JavaScript">
+    function check() {
+        if (document.getElementById("name").value === "") {
+            alert("ID is Empty!!");
+            return false;
+        }
+        if (document.getElementById("password").value === "") {
+            alert("password is Empty!");
+            return false;
+        }
+        return true;
+    }
+</script>
+<h1>山科最大同性交友中心Potato System 上线啦~</h1>
+<form action="Login" method="post" onsubmit="return check()">
+    <table>
+        <caption>Welcome To Sign in!</caption>
+        <tr>
+            <th>ID</th>
+            <th><input type="text" id="name" name="user name"></th>
+        </tr>
+        <tr>
+            <th>password</th>
+            <th><input type="password" id="password" name="password"></th>
+        </tr>
+    </table>
+    <input type="submit" value="login now!">
+    <input type="reset" value="reset">
+</form>
+<script language="JavaScript">
+    function check2() {
+        if (document.getElementById("check number").value === "") {
+            alert("The Id you check is Empty!");
+            return false;
+        }
+        return true;
+    }
+</script>
+<br><br>
+<form action="SearchServlet" method="post" onsubmit="return check2()">
+    <h3>let me know what you search?</h3>
+    Id what you check:<input type="text" name="search id" id="check number">
+    <input type="submit" value="check!">
+    <input type="reset" value="Reset">
+</form>
+<p>欢迎支持作者~</p>
+<a href="http://space.bilibili.com/34980857?">欢迎关注我的b站</a><br>
+<img src="1545319758581.jpg" width="270" height="420">
+</body>
+</html>
